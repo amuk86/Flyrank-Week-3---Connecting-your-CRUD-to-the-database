@@ -5,7 +5,7 @@ import sqlite3
 
 app = fastapi.FastAPI()
 
-# --- Stage 0: Database Setup ---
+# Stage 0: Database Setup 
 conn = sqlite3.connect("task.db")
 
 conn.execute("""
@@ -60,3 +60,15 @@ def searchTask(task_id: int):
         return {"404": "Task not found"}
 
     return [dict(row) for row in rows]
+
+#Stage 2: Create new tasks
+
+@app.put("/insert_task")
+def putTask(input_title: str, input_done: bool):
+    db=get_db()
+    cursor = db.execute("INSERT OR IGNORE INTO tasks (title, done) VALUES (?, ?)",(input_title,input_done,))
+    db.commit()
+    db.close()
+    if not input_title:
+        return 400
+    return 201
