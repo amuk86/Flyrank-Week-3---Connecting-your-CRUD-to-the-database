@@ -72,3 +72,11 @@ def putTask(input_title: str, input_done: bool):
     if not input_title:
         return 400
     return 201
+
+#Stage 3 — Update and delete 
+@app.delete("/removeTask")
+def removeTask(id: int):
+    db = get_db()
+    cursor = db.execute("DELETE FROM tasks WHERE id = ?", (id,))
+    db.commit()
+    return f"row with id:{id} deleted"
