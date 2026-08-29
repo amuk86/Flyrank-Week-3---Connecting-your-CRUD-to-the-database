@@ -26,7 +26,7 @@ conn = sqlite3.connect("task.db")
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/amuk86/Flyrank-Week-3---Connecting-your-CRUD-to-the-database
    cd <your-repo-folder>
    ```
 
