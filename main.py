@@ -1,6 +1,8 @@
 import fastapi
 import sqlite3
 
+#python -m uvicorn main:app --reload
+
 app = fastapi.FastAPI()
 
 # --- Stage 0: Database Setup ---
