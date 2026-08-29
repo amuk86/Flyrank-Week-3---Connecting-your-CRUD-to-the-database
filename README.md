@@ -69,10 +69,8 @@ conn = sqlite3.connect("task.db")
 
 ## Database Viewer Screenshot
 
-*(Add a screenshot of your database viewer here, e.g. DB Browser for SQLite showing the `tasks` table. Example markdown once you have the image saved in your repo:)*
+<img width="1366" height="768" alt="Screenshot From 2026-08-29 18-21-09" src="https://github.com/user-attachments/assets/6ff86897-fa9b-4903-bbec-25958a90505e" />
 
-```markdown
-![Tasks table in DB Browser for SQLite](./screenshots/db-viewer.png)
 ```
 
 ## Example SQL Query Executed
